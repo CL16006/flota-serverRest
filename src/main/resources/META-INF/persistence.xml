@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="flota_unit" transaction-type="JTA">
-    <jta-data-source>jdbc/flotilla</jta-data-source>
+    <jta-data-source>jdbc/flota_prn335</jta-data-source>
     <class>sv.edu.uesocc.ingenieria.prn335_2018.flota.datos.definicion.Marca</class>
     <class>sv.edu.uesocc.ingenieria.prn335_2018.flota.datos.definicion.EstadoReserva</class>
     <class>sv.edu.uesocc.ingenieria.prn335_2018.flota.datos.definicion.EstadoVehiculo</class>

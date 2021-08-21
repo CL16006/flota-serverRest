@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Principal Flota</title>
+    </h:head>
+    <h:body>
+       
+            <p:panel>
+                <h1>MARCAS DISPONIBLES</h1>
+                <h2>Buscar:</h2>
+                <p:autoComplete value="#{marcaBean.selectedMarca}" completeMethod="#{marcaBean.complete}" maxResults="5"
+                                minQueryLength="1" queryDelay="1000" var="marcaBuscada" itemLabel="#{marcaBuscada.nombre}"
+                                itemValue="#{marcaBuscada}" converter="marcaConverter">
+                 
+                </p:autoComplete>
+                     <p:panel>
+                         <h1>Tabla de Marcas</h1>
+              <h:form id="form1">
+             
+            <p:dataTable var="lista" value="#{marcaBean.marcaLazy}" paginator="true" rows="5"
+                         lazy="true" selectionMode="single" selection="#{marcaBean.marca}"
+                         style="background-color: chartreuse; border-color: blue">
+             
+                <p:column headerText="id">
+                    <h:outputText value="#{lista.idMarca}"></h:outputText>
+                </p:column>
+                 <p:column headerText="nombre">
+                     <h:outputText value="#{lista.nombre}"></h:outputText>
+                </p:column>
+                 <p:column headerText="descripcion">
+                     <h:outputText value="#{lista.descripcion}"></h:outputText>
+                </p:column>
+                 <p:column headerText="activo">
+                     <h:outputText value="#{lista.activo}"/>
+                </p:column>
+            </p:dataTable>
+        </h:form>
+</p:panel>
+            </p:panel>
+      
+      
+    </h:body>
+</html>
+
